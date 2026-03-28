@@ -1,0 +1,55 @@
+# Compiled files
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.lib
+*.dll
+*.so
+*.dylib
+
+# Build folders
+build/
+bin/
+Debug/
+Release/
+x64/
+x86/
+cmake-build-*/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.user
+*.userprefs
+*.suo
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.code-workspace
+
+# Backup files
+*.bak
+*.tmp
+*.log
+
+# Data files (runtime generated)
+Data/
+!Data/.gitkeep
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+Clients.txts
+.vs/
