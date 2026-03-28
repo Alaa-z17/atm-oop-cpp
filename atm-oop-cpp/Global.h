@@ -8,14 +8,15 @@
 #include <algorithm>
 #include <ctime>
 
-#include "Libraries/clsString.h"
-#include "Libraries/clsDate.h"
-#include "Libraries/clsInputValidate.h"
+#include "clsString.h"
+#include "clsDate.h"
+#include "clsInputValidate.h"
+#include "clsClientData.h"
 
 using namespace std;
 
 // File path
-const string CLIENTS_FILE = "Data/Clients.txt";
+const string CLIENTS_FILE = "Clients.txt";
 
 // System boot function
 void SystemBoot();

@@ -1,6 +1,12 @@
-#include <iostream>
+#include "Global.h"
+#include "clsATMMainScreen.h"   
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    SystemBoot();
+
+    
+    cout << "System ready.\n";
+
+    return 0;
 }
