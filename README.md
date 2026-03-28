@@ -4,7 +4,7 @@ A complete ATM (Automated Teller Machine) simulation built in C++ that demonstra
 
 ## 🎥 Video Tutorial
 
-[![Student Management System C++ Tutorial](https://youtu.be/vi/5O0PEIFeCiI/0.jpg)](https://www.youtube.com/watch?v=5O0PEIFeCiI)
+[![Student Management System C++ Tutorial](https://youtu.be/5O0PEIFeCiI/0.jpg)](https://www.youtube.com/watch?v=5O0PEIFeCiI)
 
 ## ✨ Features
 
