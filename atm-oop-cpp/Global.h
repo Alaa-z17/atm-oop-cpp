@@ -11,7 +11,6 @@
 #include "clsString.h"
 #include "clsDate.h"
 #include "clsInputValidate.h"
-#include "clsClientData.h"
 
 using namespace std;
 

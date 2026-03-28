@@ -3,6 +3,7 @@
 #include "clsClient.h"
 #include <vector>
 #include <fstream>
+#include "clsATMManager.h"
 
 class clsClientData
 {

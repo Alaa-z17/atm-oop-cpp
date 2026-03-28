@@ -12,6 +12,8 @@ protected:
         // system("clear"); // For Linux/Mac
     }
 
+	friend void SystemBoot(); // Allow SystemBoot to call _pauseScreen
+
     static void _pauseScreen()
     {
         cout << "\nPress Enter to continue...";

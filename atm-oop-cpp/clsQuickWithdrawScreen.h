@@ -1,12 +1,12 @@
 #pragma once
 
 #include "clsScreen.h"
-#include "../clsClientData.h"
+#include "clsATMManager.h"
+#include "clsClientData.h"
 
 class clsQuickWithdrawScreen : public clsScreen
 {
 private:
-    // Enum for quick withdrawal amounts
     enum enQuickWithdrawAmounts
     {
         eAmount20 = 20,
@@ -56,44 +56,12 @@ private:
         }
     }
 
-    static void _performWithdrawal(const clsClient& client, float amount)
-    {
-        // Check if balance is sufficient
-        if (client.getBalance() < amount)
-        {
-            cout << "\n❌ Insufficient balance! Your current balance is: $"
-                << fixed << setprecision(2) << client.getBalance() << endl;
-            return;
-        }
-
-        // Update balance in the client object
-        clsClient updatedClient = client;
-        updatedClient.setBalance(client.getBalance() - amount);
-
-        // Save to file
-        if (clsClientData::updateClient(updatedClient))
-        {
-            cout << "\n✅ Withdrawal successful!\n";
-            cout << "   Amount: $" << amount << endl;
-            cout << "   New Balance: $" << fixed << setprecision(2) << updatedClient.getBalance() << endl;
-
-            // Update the logged-in client in the main screen (we'll handle this later)
-            // For now, we just update the file.
-        }
-        else
-        {
-            cout << "\n❌ Error: Could not process withdrawal.\n";
-        }
-    }
-
 public:
     void show() override
     {
-        clsClient client = clsLoginScreen::getLoggedInClient();
-
-        if (client.getAccountNumber() == "")
+        if (!clsATMManager::isLoggedIn())
         {
-            cout << "\n❌ Error: No client logged in.\n";
+            cout << "\n❌ No client logged in.\n";
             _pauseScreen();
             return;
         }
@@ -101,11 +69,19 @@ public:
         enQuickWithdrawAmounts choice;
         do {
             choice = _showMenu();
-
             if (choice != eExit)
             {
                 float amount = static_cast<float>(choice);
-                _performWithdrawal(client, amount);
+                if (clsATMManager::withdraw(amount))
+                {
+                    cout << "\n Withdrawal successful!\n";
+                    cout << "   Amount: $" << amount << endl;
+                    cout << "   New Balance: $" << fixed << setprecision(2) << clsATMManager::getBalance() << endl;
+                }
+                else
+                {
+                    cout << "\n Insufficient balance or transaction error.\n";
+                }
                 _pauseScreen();
             }
         } while (choice != eExit);

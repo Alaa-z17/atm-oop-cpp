@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="atm-oop-cpp/atm-oop-cpp.vcxproj" />
+  <Project Path="atm-oop-cpp/atm-oop-cpp.vcxproj" Id="b157e96e-d602-4069-b28d-92612ab36a72" />
 </Solution>
