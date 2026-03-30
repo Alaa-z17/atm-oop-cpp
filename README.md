@@ -3,8 +3,7 @@
 A complete ATM (Automated Teller Machine) simulation built in C++ that demonstrates advanced OOP concepts. The system allows clients to log in, withdraw money (quick or custom amounts), deposit funds, and check their balance. Data is persisted in a text file, and the architecture follows a clean separation of presentation, business, and data layers.
 
 ## 🎥 Video Tutorial
-
-[![Student Management System C++ Tutorial](https://youtu.be/5O0PEIFeCiI/0.jpg)](https://www.youtube.com/watch?v=5O0PEIFeCiI)
+[![Student Management System C++ Tutorial](https://img.youtube.com/vi/5O0PEIFeCiI/0.jpg)](https://youtu.be/5O0PEIFeCiI)
 
 ## ✨ Features
 
